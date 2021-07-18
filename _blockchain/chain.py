@@ -14,8 +14,7 @@ from .block import Block
 @dataclass
 class Chain(TupleComparable):
 
-    blocks = field(default_factory=deque)  # Gonna fail!
-    # blocks: typing.MutableSequence[typing.Any] = field(default_factory=deque)
+    blocks: typing.MutableSequence[typing.Any] = field(default_factory=deque)
 
     def __post_init__(self) -> None:
         self.add_genesis_block()
