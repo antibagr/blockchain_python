@@ -56,11 +56,3 @@ def test_chain():
     c_forked = chain.fork('latest')
     c_forked.blocks[5].previous_hash = c_forked.blocks[1].hash
     assert not c_forked.verify(verbose=False)
-
-
-def test_will_fail():
-
-    cake = None
-    a_lie = False
-
-    assert cake is a_lie
