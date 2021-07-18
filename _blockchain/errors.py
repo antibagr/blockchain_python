@@ -1,0 +1,2 @@
+class ChainValidationError(ValueError):
+    pass
